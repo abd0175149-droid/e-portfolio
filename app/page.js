@@ -9,8 +9,8 @@ export default function Home() {
             <main>
                 <div className="hero">
                     <div className="hero-content">
-                        <h1>ملف الإنجاز الإلكتروني</h1>
-                        <p>طالب دراسات عليا في تقنيات التعليم</p>
+                        <h1>ملف إنجاز عبدالرزاق الخطيب</h1>
+                        <p>معلم فيزياء | مدرب تربوي | مستشار أكاديمي</p>
                         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
                             <Link href="/cv" className="btn btn-primary">📖 استكشاف السيرة الذاتية</Link>
                             <Link href="/reflections" className="btn btn-secondary">✍️ التفكيرات التأملية</Link>

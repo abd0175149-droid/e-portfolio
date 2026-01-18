@@ -1,126 +1,128 @@
+"use client"
+
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import DownloadButton from '@/components/DownloadButton'
 import cvData from '@/data/cv.json'
 
 export default function CVPage() {
-    return (
-        <>
-            <Navbar />
-            <main className="cv-premium">
-                <div className="page-header cv-header">
-                    <div className="container">
-                        <div className="header-flex">
-                            <div className="profile-img-container">
-                                <img src="/images/profile.jpg" alt={cvData.personalInfo.name} className="profile-img" />
-                            </div>
-                            <div className="header-text">
-                                <h1>{cvData.personalInfo.name}</h1>
-                                <h2>{cvData.personalInfo.title}</h2>
-                                <div className="contact-pills">
-                                    <span>✉️ {cvData.personalInfo.email}</span>
-                                    <span>📞 {cvData.personalInfo.phone}</span>
-                                    <span>📍 {cvData.personalInfo.location}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  return (
+    <>
+      <Navbar />
+      <main className="cv-premium">
+        <div className="page-header cv-header">
+          <div className="container">
+            <div className="header-flex">
+              <div className="profile-img-container">
+                <img src="/images/profile.jpg" alt={cvData.personalInfo.name} className="profile-img" />
+              </div>
+              <div className="header-text">
+                <h1>{cvData.personalInfo.name}</h1>
+                <h2>{cvData.personalInfo.title}</h2>
+                <div className="contact-pills">
+                  <span>✉️ {cvData.personalInfo.email}</span>
+                  <span>📞 {cvData.personalInfo.phone}</span>
+                  <span>📍 {cvData.personalInfo.location}</span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <div className="container cv-body">
-                    <div className="cv-grid">
-                        {/* Right Column (Main content in RTL) */}
-                        <div className="cv-main-col">
-                            <section className="cv-card shadow-lg">
-                                <h3 className="section-title">🔍 نبذة تعريفية</h3>
-                                <p className="summary-text">{cvData.summary}</p>
-                            </section>
+        <div className="container cv-body">
+          <div className="cv-grid">
+            {/* Right Column (Main content in RTL) */}
+            <div className="cv-main-col">
+              <section className="cv-card shadow-lg">
+                <h3 className="section-title">🔍 نبذة تعريفية</h3>
+                <p className="summary-text">{cvData.summary}</p>
+              </section>
 
-                            <section className="cv-card shadow-lg">
-                                <h3 className="section-title">💼 الخبرات العملية</h3>
-                                <div className="experience-list">
-                                    {cvData.experience.map((exp, index) => (
-                                        <div key={index} className="exp-item">
-                                            <div className="exp-dot"></div>
-                                            <div className="exp-content">
-                                                <h4>{exp.title}</h4>
-                                                <h5>{exp.company}</h5>
-                                                <p className="exp-period">{exp.period}</p>
-                                                <ul>
-                                                    {exp.responsibilities.map((resp, idx) => (
-                                                        <li key={idx}>{resp}</li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </section>
-
-                            <section className="cv-card shadow-lg">
-                                <h3 className="section-title">🚀 المشاريع</h3>
-                                <div className="projects-grid">
-                                    {cvData.projects.map((proj, index) => (
-                                        <div key={index} className="project-node">
-                                            <h4>{proj.title}</h4>
-                                            <p className="proj-year">{proj.year}</p>
-                                            <p>{proj.description}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </section>
-                        </div>
-
-                        {/* Left Column (Sidebar-like content in RTL) */}
-                        <div className="cv-side-col">
-                            <div style={{ marginBottom: '2rem' }}>
-                                <DownloadButton filePath="cv/cv.pdf" label="تحميل السيرة الذاتية PDF" />
-                            </div>
-
-                            <section className="cv-card glassy-card">
-                                <h3 className="section-title-sm">🎓 التعليم</h3>
-                                {cvData.education.map((edu, index) => (
-                                    <div key={index} className="edu-item">
-                                        <h4>{edu.degree}</h4>
-                                        <p className="edu-inst">{edu.institution}</p>
-                                        <p className="edu-date">{edu.period}</p>
-                                        <p className="edu-desc">{edu.description}</p>
-                                    </div>
-                                ))}
-                            </section>
-
-                            <section className="cv-card glassy-card">
-                                <h3 className="section-title-sm">🛠️ المهارات</h3>
-                                <div className="skills-tags">
-                                    <h5 style={{ color: 'var(--accent)', marginBottom: '0.5rem' }}>تقنية</h5>
-                                    <div className="tags-flex">
-                                        {cvData.skills.technical.map((s, i) => <span key={i} className="skill-tag">{s}</span>)}
-                                    </div>
-                                    <h5 style={{ color: 'var(--accent)', marginTop: '1rem', marginBottom: '0.5rem' }}>شخصية</h5>
-                                    <div className="tags-flex">
-                                        {cvData.skills.soft.map((s, i) => <span key={i} className="skill-tag soft">{s}</span>)}
-                                    </div>
-                                </div>
-                            </section>
-
-                            <section className="cv-card glassy-card">
-                                <h3 className="section-title-sm">🏅 الشهادات</h3>
-                                <div className="certs-list">
-                                    {cvData.certificates.map((cert, index) => (
-                                        <div key={index} className="cert-item-sm">
-                                            <strong>{cert.title}</strong>
-                                            <p>{cert.issuer} | {cert.year}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </section>
-                        </div>
+              <section className="cv-card shadow-lg">
+                <h3 className="section-title">💼 الخبرات العملية</h3>
+                <div className="experience-list">
+                  {cvData.experience.map((exp, index) => (
+                    <div key={index} className="exp-item">
+                      <div className="exp-dot"></div>
+                      <div className="exp-content">
+                        <h4>{exp.title}</h4>
+                        <h5>{exp.company}</h5>
+                        <p className="exp-period">{exp.period}</p>
+                        <ul>
+                          {exp.responsibilities.map((resp, idx) => (
+                            <li key={idx}>{resp}</li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
+                  ))}
                 </div>
-            </main>
-            <Footer />
+              </section>
 
-            <style jsx>{`
+              <section className="cv-card shadow-lg">
+                <h3 className="section-title">🚀 المشاريع</h3>
+                <div className="projects-grid">
+                  {cvData.projects.map((proj, index) => (
+                    <div key={index} className="project-node">
+                      <h4>{proj.title}</h4>
+                      <p className="proj-year">{proj.year}</p>
+                      <p>{proj.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </div>
+
+            {/* Left Column (Sidebar-like content in RTL) */}
+            <div className="cv-side-col">
+              <div style={{ marginBottom: '2rem' }}>
+                <DownloadButton filePath="cv/cv.pdf" label="تحميل السيرة الذاتية PDF" />
+              </div>
+
+              <section className="cv-card glassy-card">
+                <h3 className="section-title-sm">🎓 التعليم</h3>
+                {cvData.education.map((edu, index) => (
+                  <div key={index} className="edu-item">
+                    <h4>{edu.degree}</h4>
+                    <p className="edu-inst">{edu.institution}</p>
+                    <p className="edu-date">{edu.period}</p>
+                    <p className="edu-desc">{edu.description}</p>
+                  </div>
+                ))}
+              </section>
+
+              <section className="cv-card glassy-card">
+                <h3 className="section-title-sm">🛠️ المهارات</h3>
+                <div className="skills-tags">
+                  <h5 style={{ color: 'var(--accent)', marginBottom: '0.5rem' }}>تقنية</h5>
+                  <div className="tags-flex">
+                    {cvData.skills.technical.map((s, i) => <span key={i} className="skill-tag">{s}</span>)}
+                  </div>
+                  <h5 style={{ color: 'var(--accent)', marginTop: '1rem', marginBottom: '0.5rem' }}>شخصية</h5>
+                  <div className="tags-flex">
+                    {cvData.skills.soft.map((s, i) => <span key={i} className="skill-tag soft">{s}</span>)}
+                  </div>
+                </div>
+              </section>
+
+              <section className="cv-card glassy-card">
+                <h3 className="section-title-sm">🏅 الشهادات</h3>
+                <div className="certs-list">
+                  {cvData.certificates.map((cert, index) => (
+                    <div key={index} className="cert-item-sm">
+                      <strong>{cert.title}</strong>
+                      <p>{cert.issuer} | {cert.year}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+
+      <style jsx>{`
         .cv-premium {
           background-color: #f0f2f5;
           min-height: 100vh;
@@ -341,6 +343,6 @@ export default function CVPage() {
           .contact-pills { justify-content: center; }
         }
       `}</style>
-        </>
-    )
+    </>
+  )
 }
