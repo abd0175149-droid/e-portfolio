@@ -1,0 +1,42 @@
+[
+    {
+        "title": "المعايير الدولية للجمعية الدولية للتكنولوجيا في التعليم (ISTE)",
+        "url": "https://www.iste.org/standards",
+        "description": "معايير ISTE للمعلمين والطلاب - دليل شامل لدمج التكنولوجيا في التعليم"
+    },
+    {
+        "title": "أكاديمية خان (Khan Academy)",
+        "url": "https://ar.khanacademy.org/",
+        "description": "منصة تعليمية مجانية توفر دروساً تفاعلية في مختلف المواد"
+    },
+    {
+        "title": "إدراك - منصة التعلم الإلكتروني",
+        "url": "https://www.edraak.org/",
+        "description": "منصة عربية للتعليم المفتوح توفر دورات مجانية عالية الجودة"
+    },
+    {
+        "title": "مكتبة TED-Ed",
+        "url": "https://ed.ted.com/",
+        "description": "دروس تعليمية متحركة قصيرة ومشوقة في مختلف المجالات"
+    },
+    {
+        "title": "جوجل للتعليم (Google for Education)",
+        "url": "https://edu.google.com/",
+        "description": "مجموعة أدوات Google التعليمية المجانية للمعلمين والطلاب"
+    },
+    {
+        "title": "مايكروسوفت للتعليم (Microsoft Education)",
+        "url": "https://www.microsoft.com/en-us/education",
+        "description": "حلول وأدوات مايكروسوفت التعليمية لتحسين تجربة التعلم"
+    },
+    {
+        "title": "Coursera",
+        "url": "https://www.coursera.org/",
+        "description": "منصة للدورات الجامعية عبر الإنترنت من أفضل الجامعات العالمية"
+    },
+    {
+        "title": "منصة رواق",
+        "url": "https://www.rwaq.org/",
+        "description": "منصة تعليمية عربية للمساقات الدراسية الأكاديمية المجانية"
+    }
+]

@@ -1,0 +1,16 @@
+{
+    "name": "e-portfolio",
+    "version": "1.0.0",
+    "description": "E-Portfolio for Graduate Student",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "export": "next build && next export"
+    },
+    "dependencies": {
+        "next": "^14.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}

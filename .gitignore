@@ -1,0 +1,16 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Node (إذا استخدمت لاحقًا)
+node_modules/
+
+# Environment
+.env
+
+# Logs
+*.log
