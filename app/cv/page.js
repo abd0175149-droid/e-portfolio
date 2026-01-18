@@ -1,11 +1,14 @@
 "use client"
 
+import { useState } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Modal from '@/components/Modal'
 import DownloadButton from '@/components/DownloadButton'
 import cvData from '@/data/cv.json'
 
 export default function CVPage() {
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false)
   return (
     <>
       <Navbar />
@@ -13,7 +16,11 @@ export default function CVPage() {
         <div className="page-header cv-header">
           <div className="container">
             <div className="header-flex">
-              <div className="profile-img-container">
+              <div
+                className="profile-img-container"
+                onClick={() => setIsPreviewOpen(true)}
+                style={{ cursor: 'zoom-in' }}
+              >
                 <img src="/images/profile.jpg" alt={cvData.personalInfo.name} className="profile-img" />
               </div>
               <div className="header-text">
@@ -121,6 +128,21 @@ export default function CVPage() {
         </div>
       </main>
       <Footer />
+
+      {/* Image Preview Modal */}
+      <Modal
+        isOpen={isPreviewOpen}
+        onClose={() => setIsPreviewOpen(false)}
+        title={cvData.personalInfo.name}
+      >
+        <div style={{ textAlign: 'center' }}>
+          <img
+            src="/images/profile.jpg"
+            alt={cvData.personalInfo.name}
+            style={{ maxWidth: '100%', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}
+          />
+        </div>
+      </Modal>
 
       <style jsx>{`
         .cv-premium {
