@@ -85,15 +85,15 @@ export default function CVPage() {
                                     <div key={index} className="card" style={{ padding: '1.25rem', borderRight: '4px solid var(--accent)' }}>
                                         <h4 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>{cert.title}</h4>
                                         <p style={{ fontSize: '0.9rem' }}><strong>{cert.issuer}</strong></p>
-                                        <p style={{ fontSize: '0.85rem', color: var(--secondary) }}>{cert.year}</p>
-                  </div>
-                ))}
+                                        <p style={{ fontSize: '0.85rem', color: 'var(--secondary)' }}>{cert.year}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </CVSection>
                     </div>
-                </CVSection>
-            </div>
-        </div >
-      </main >
-        <Footer />
-    </>
-  )
+                </div >
+            </main >
+            <Footer />
+        </>
+    )
 }
