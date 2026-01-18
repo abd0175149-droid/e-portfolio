@@ -1,16 +1,24 @@
-# System files
-.DS_Store
-Thumbs.db
-
-# Editors
-.vscode/
-.idea/
-
-# Node (إذا استخدمت لاحقًا)
+# dependencies
 node_modules/
 
-# Environment
-.env
+# next
+.next/
+out/
 
-# Logs
-*.log
+# env files
+.env
+.env.local
+.env.production
+.env.development
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
