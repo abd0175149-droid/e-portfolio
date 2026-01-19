@@ -4,7 +4,7 @@
     "description": "E-Portfolio for Graduate Student",
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build": "next build && (rm -rf deploy-ready || true) && mv out deploy-ready",
         "start": "next start"
     },
     "dependencies": {
