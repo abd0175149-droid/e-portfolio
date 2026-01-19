@@ -1,0 +1,272 @@
+.webquestHeader {
+    background: linear-gradient(120deg, #0f172a 0%, #14233b 45%, #1e293b 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.webquestHeader::before {
+    content: '';
+    position: absolute;
+    top: -140px;
+    right: -80px;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+.webquestHeader::after {
+    content: '';
+    position: absolute;
+    bottom: -160px;
+    left: -60px;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+.headerContent {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.headerBadge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 1rem;
+    border-radius: 999px;
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+}
+
+.tabsWrap {
+    margin-bottom: 6rem;
+}
+
+.tabBar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.tabButton {
+    border: 1px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    padding: 0.6rem 1.8rem;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.tabButton:hover {
+    transform: translateY(-2px);
+}
+
+.tabButtonActive {
+    background: var(--primary);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.sectionStack {
+    display: grid;
+    gap: 2rem;
+}
+
+.journey {
+    position: relative;
+    display: grid;
+    gap: 1.75rem;
+    padding-right: 1.5rem;
+}
+
+.journey::before {
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    right: 0.6rem;
+    width: 2px;
+    background: rgba(212, 175, 55, 0.2);
+}
+
+.journeyCard {
+    position: relative;
+    padding-right: 3.25rem;
+    border-right: 6px solid rgba(212, 175, 55, 0.2);
+}
+
+.stepBadge {
+    position: absolute;
+    top: 1.6rem;
+    right: 0.5rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--primary);
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+}
+
+.stepContent h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+}
+
+.stepLead {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+.stepGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.stepBox {
+    background: rgba(15, 23, 42, 0.03);
+    border-radius: 12px;
+    padding: 1.25rem;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.stepSubtitle {
+    margin-bottom: 0.75rem;
+    color: var(--accent-hover);
+    font-size: 1.05rem;
+}
+
+.rubricBlock {
+    margin-top: 1.5rem;
+}
+
+.heroCard {
+    border-right: 6px solid rgba(212, 175, 55, 0.25);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(255, 255, 255, 0.96));
+}
+
+.heroHeader {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.heroLabel {
+    color: var(--accent-hover);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.heroMeta {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: 0.35rem;
+}
+
+.metaGrid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.metaItem {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: var(--shadow-sm);
+}
+
+.metaItem span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.35rem;
+}
+
+.sectionCard {
+    border-right: 6px solid rgba(212, 175, 55, 0.2);
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.sectionText {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-main);
+}
+
+.list {
+    list-style: disc;
+    margin-right: 1.5rem;
+    display: grid;
+    gap: 0.6rem;
+    color: var(--text-main);
+}
+
+.tableWrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.rubricTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+    text-align: center;
+}
+
+.rubricTable th,
+.rubricTable td {
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    padding: 0.9rem;
+    font-size: 0.95rem;
+}
+
+.rubricTable th {
+    background: rgba(15, 23, 42, 0.06);
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.rubricTable td:first-child {
+    font-weight: 600;
+    text-align: right;
+    background: rgba(212, 175, 55, 0.06);
+}
+
+.downloadWrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .tabBar {
+        justify-content: stretch;
+    }
+
+    .tabButton {
+        width: 100%;
+    }
+}
