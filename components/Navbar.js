@@ -19,11 +19,11 @@ export default function Navbar() {
 
     const links = [
         { href: '/', label: 'الرئيسية' },
-        { href: '/intro-video', label: 'الفيديو' },
-        { href: '/reflections', label: 'التفكيرات' },
+        { href: '/intro-video', label: 'الفيديو التعريفي' },
+        { href: '/reflections', label: 'التأملات' },
         { href: '/cv', label: 'السيرة الذاتية' },
-        { href: '/philosophy', label: 'الفلسفة' },
-        { href: '/webquest', label: 'WebQuest' },
+        { href: '/philosophy', label: 'الفلسفة التربوية' },
+        { href: '/webquest', label: 'الويب كويست' },
         { href: '/iste', label: 'ISTE' },
     ]
 
@@ -31,19 +31,24 @@ export default function Navbar() {
         <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
             <div className="navbar-content">
                 <Link href="/" className="navbar-brand">
-                    <span style={{ color: 'var(--accent)' }}>🎓</span> ملف الإنجاز
+                    <span className="brand-mark">م</span>
+                    <span>ملف الإنجاز الإلكتروني</span>
                 </Link>
 
                 <button
-                    className="navbar-toggle"
+                    className={`navbar-toggle ${isOpen ? 'open' : ''}`}
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle menu"
+                    aria-expanded={isOpen}
+                    aria-controls="primary-navigation"
                     style={{ cursor: 'pointer' }}
                 >
-                    {isOpen ? '✕' : '☰'}
+                    <span />
+                    <span />
+                    <span />
                 </button>
 
-                <ul className={`navbar-menu ${isOpen ? 'active' : ''}`}>
+                <ul id="primary-navigation" className={`navbar-menu ${isOpen ? 'active' : ''}`}>
                     {links.map((link) => (
                         <li key={link.href}>
                             <Link
@@ -57,26 +62,6 @@ export default function Navbar() {
                     ))}
                 </ul>
             </div>
-            <style jsx>{`
-        .navbar-scrolled {
-          background: rgba(15, 23, 42, 0.95);
-          box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-          height: 70px;
-        }
-        @media (max-width: 768px) {
-          .navbar-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: var(--primary);
-            flex-direction: column;
-            padding: 2rem;
-            display: ${isOpen ? 'flex' : 'none'};
-            border-bottom: 2px solid var(--accent);
-          }
-        }
-      `}</style>
         </nav>
     )
 }
