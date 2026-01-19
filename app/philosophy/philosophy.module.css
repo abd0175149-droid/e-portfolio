@@ -1,0 +1,162 @@
+.philosophyHeader {
+    background: linear-gradient(120deg, #0f172a 0%, #14233b 45%, #1e293b 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.philosophyHeader::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+.philosophyHeader::after {
+    content: '';
+    position: absolute;
+    bottom: -160px;
+    left: -60px;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+.headerContent {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+}
+
+.headerPills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1.75rem;
+}
+
+.headerPills span {
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    background: rgba(15, 23, 42, 0.25);
+}
+
+.philosophyContent {
+    display: grid;
+    gap: 2.5rem;
+    margin-bottom: 6rem;
+}
+
+.introCard {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(255, 255, 255, 0.95));
+    border-right: 4px solid var(--accent);
+}
+
+.sectionTitle {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.sectionStack {
+    display: grid;
+    gap: 2rem;
+}
+
+.sectionCard {
+    border-right: 6px solid rgba(212, 175, 55, 0.2);
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sectionIndex {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--primary);
+    color: var(--accent);
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+}
+
+.sectionTag {
+    display: inline-flex;
+    margin-top: 0.4rem;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(212, 175, 55, 0.12);
+    color: var(--accent-hover);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.sectionBody p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: var(--text-main);
+    line-height: 1.9;
+}
+
+.quoteCard {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    text-align: center;
+    border: none;
+}
+
+.quoteCard p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 2;
+}
+
+.downloadWrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .sectionHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sectionIndex {
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+    }
+
+    .quoteCard p {
+        font-size: 1.1rem;
+    }
+}
